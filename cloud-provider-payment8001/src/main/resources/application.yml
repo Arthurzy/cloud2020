@@ -9,9 +9,9 @@ spring:
     driver-class-name: org.gjt.mm.mysql.Driver             # mysql驱动包
     url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    password: 123456
+    password: dbadmin
 
 mybatis:
-  mapperLocations: classpath:mappe/*.xml
+  mapperLocations: classpath:mapper/*.xml
   type-aliases-package: com.atguigu.springcloud.entities   # 所有Entity别名所在包
 

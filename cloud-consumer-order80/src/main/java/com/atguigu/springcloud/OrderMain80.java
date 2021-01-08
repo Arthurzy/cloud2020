@@ -1,8 +1,11 @@
-package com.atguigu.spirngcloud;
+package com.atguigu.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+import com.atguigu.myrule.MyRule;
 
 /**
  * @author Arthurzy
@@ -12,6 +15,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @EnableEurekaClient
 @SpringBootApplication
+//@LoadBalancerClient(value = "myRule", configuration = MyRule.class)
 public class OrderMain80 {
     public static void main(String[] args) {
         SpringApplication.run(OrderMain80.class, args);

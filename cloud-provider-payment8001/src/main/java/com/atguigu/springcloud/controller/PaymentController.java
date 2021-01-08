@@ -1,19 +1,23 @@
 package com.atguigu.springcloud.controller;
 
-import com.atguigu.springcloud.entities.CommonResult;
-import com.atguigu.springcloud.entities.Payment;
-import com.atguigu.springcloud.service.PaymentService;
-import lombok.extern.slf4j.Slf4j;
-import net.bytebuddy.asm.Advice.This;
+import java.util.List;
+
+import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.atguigu.springcloud.entities.CommonResult;
+import com.atguigu.springcloud.entities.Payment;
+import com.atguigu.springcloud.service.PaymentService;
 
-import javax.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author Arthurzy
@@ -70,5 +74,10 @@ public class PaymentController {
         }
         
         return this.discoveryClient;
+    }
+    
+    @GetMapping("payment/lb")
+    public String getPaymentLB() {
+        return serverPort;
     }
 }

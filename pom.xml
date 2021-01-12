@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.atguigu.springcloud</groupId>
@@ -8,18 +10,21 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>cloud-api-commons</module>
+        <module>cloud-eureka-server7001</module>
+        <module>cloud-eureka-server7002</module>
+
+        <module>cloud-consumer-order80</module>
+        <module>cloud-consumerzk-order80</module>
+        <module>cloud-consumerconsul-order80</module>
+        <module>cloud-consumer-feign-order80</module>
+
         <module>cloud-provider-payment8001</module>
         <module>cloud-provider-payment8002</module>
         <module>cloud-provider-payment8004</module>
         <module>cloud-providerconsul-payment8006</module>
-        <module>cloud-eureka-server7001</module>
-        <module>cloud-eureka-server7002</module>
-        <module>cloud-consumer-order80</module>
-        <module>cloud-consumerzk-order80</module>
-        <module>cloud-api-commons</module>
-        
-    <module>cloud-consumerconsul-order80</module>
-  </modules>
+        <module>cloud-provider-hystrix-payment8001</module>
+    </modules>
 
     <!-- 统一管理jar包版本 -->
     <properties>

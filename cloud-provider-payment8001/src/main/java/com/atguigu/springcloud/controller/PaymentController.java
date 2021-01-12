@@ -1,6 +1,7 @@
 package com.atguigu.springcloud.controller;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Resource;
 
@@ -76,8 +77,19 @@ public class PaymentController {
         return this.discoveryClient;
     }
     
-    @GetMapping("payment/lb")
+    @GetMapping("/payment/lb")
     public String getPaymentLB() {
+        return serverPort;
+    }
+    
+    @GetMapping("/payment/feign/timeout")
+    public String paymentFeignTimeout() {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        
         return serverPort;
     }
 }

@@ -1,5 +1,7 @@
 package com.atguigu.springcloud.controller;
 
+import static org.mockito.Mockito.RETURNS_SMART_NULLS;
+
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -38,6 +40,14 @@ public class PaymentController {
     public String paymentInfo_Timeout(@PathVariable("id") Integer id) {
         String result = paymentService.paymentInfo_Timeout(id);
         log.info("result = " + result);
+        return result;
+    }
+    
+    // ======= b.服务熔断
+    @GetMapping("/payment/circuit/{id}")
+    public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
+        String result = paymentService.paymentCircuitBreaker(id);
+        log.info("**********result: " + result);
         return result;
     }
 }

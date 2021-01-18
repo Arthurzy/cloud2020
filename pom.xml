@@ -12,6 +12,8 @@
         <module>cloud-eureka-server7001</module>
         <module>cloud-eureka-server7002</module>
         <module>cloud-gateway-gateway9527</module>
+        <module>cloud-config-center3344</module>
+        <module>cloud-config-client-3355</module>
 
         <module>cloud-consumer-order80</module>
         <module>cloud-consumerzk-order80</module>
@@ -25,7 +27,8 @@
         <module>cloud-provider-payment8004</module>
         <module>cloud-providerconsul-payment8006</module>
         <module>cloud-provider-hystrix-payment8001</module>
-        
+          
+    
   </modules>
 
     <!-- 统一管理jar包版本 -->

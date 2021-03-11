@@ -12,6 +12,12 @@
     <artifactId>cloud-consumer-order80</artifactId>
 
     <dependencies>
+    
+        <dependency> <!-- 包含了sleuth + zipkin -->
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+        
         <dependency> <!-- eureka client 而且自带ribbon-->
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>

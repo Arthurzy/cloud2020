@@ -6,3 +6,4 @@
 **/.classpath
 *.iml
 **/.idea/
+**/nacos-server-1.1.4/nacos

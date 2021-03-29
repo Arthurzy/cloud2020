@@ -9,3 +9,4 @@
 **/nacos-server-1.1.4/nacos/
 **/seata-server-0.9.0/seata/
 /workspace.code-workspace
+.vscode/launch.json

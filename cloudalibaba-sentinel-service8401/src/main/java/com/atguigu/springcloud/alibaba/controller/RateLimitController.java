@@ -30,7 +30,7 @@ public class RateLimitController {
     }
 
     @GetMapping("/rateLimit/customerBlockHandler")
-    @SentinelResource(value = "customerBlockHandler", 
+    @SentinelResource(value = "customerBlockHandler", //@SentinelResource 不支持private方法
         blockHandlerClass = CustomerBlockHandler.class, 
         blockHandler = "handlerException2")
     public CommonResult customerBlockHandler(){

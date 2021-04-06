@@ -13,6 +13,11 @@
     <artifactId>cloudalibaba-sentinel-service8401</artifactId>
 
     <dependencies>
+        <dependency> <!-- spring cloud alibaba sentinel-datasource-nacos 后续做持久化用到 -->
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+        </dependency>
+        
         <dependency> <!-- nacos config -->
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>

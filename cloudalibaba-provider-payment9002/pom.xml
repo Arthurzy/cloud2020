@@ -12,7 +12,6 @@
 
     <artifactId>cloudalibaba-provider-payment9002</artifactId>
 
-
     <dependencies>
         <dependency> <!-- Spring cloud alibaba nacos -->
             <groupId>com.alibaba.cloud</groupId>

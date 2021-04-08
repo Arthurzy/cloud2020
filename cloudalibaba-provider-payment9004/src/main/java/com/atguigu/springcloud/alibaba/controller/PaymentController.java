@@ -1,4 +1,4 @@
-package com.atguigu.springcloud.controller;
+package com.atguigu.springcloud.alibaba.controller;
 
 import java.util.HashMap;
 

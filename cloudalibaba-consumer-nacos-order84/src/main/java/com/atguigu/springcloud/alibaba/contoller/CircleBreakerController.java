@@ -1,4 +1,4 @@
-package com.atguigu.springcloud.contoller;
+package com.atguigu.springcloud.alibaba.contoller;
 
 import javax.annotation.Resource;
 
@@ -9,9 +9,9 @@ import org.springframework.web.client.RestTemplate;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.atguigu.springcloud.alibaba.service.PaymentService;
 import com.atguigu.springcloud.entities.CommonResult;
 import com.atguigu.springcloud.entities.Payment;
-import com.atguigu.springcloud.service.PaymentService;
 
 @RestController
 public class CircleBreakerController {

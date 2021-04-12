@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class) // 取消数据源的自动创建
-@EnableDiscoveryClient
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableFeignClients
-public class SeataOrderMainApp2001 {
+@EnableDiscoveryClient
+public class SeataStorageServiceApplication2002 {
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(SeataOrderMainApp2001.class, args);
+		SpringApplication.run(SeataStorageServiceApplication2002.class, args);
 	}
 
 }
